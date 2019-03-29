@@ -1,0 +1,120 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+    color: #626262;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+button, input, optgroup, select, textarea {
+    line-height: inherit;
+}
+
+.container {
+    width: 900px;
+    margin: 0 auto;
+    padding: 72px 0;
+}
+
+/* MENU */
+.header {
+    margin-bottom: 94px;
+}
+
+.menu-list {
+    font-size: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.menu-item {
+    display: inline-block;
+}
+
+.menu-item a {
+    padding: 0 60px;
+    line-height: 1.8;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: #626262;
+}
+
+.menu-item a:hover {
+    color: #03a9f4;
+}
+
+
+/* MAIN CONTENT */
+.section-content {
+    font-size: 0;
+}
+
+.article-container {
+    display: inline-block;
+    width: 420px;
+    padding-bottom: 50px;
+}
+
+.article-container:nth-of-type(odd) {
+    margin-right: 60px;
+}
+
+.article-container:not(:nth-last-of-type(-n+2)) {
+    margin-bottom: 70px;
+}
+
+.article-container img {
+    margin-bottom: 28px;
+}
+
+.article-container h3 {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.article-container p {
+    font-size: 14px;
+}
+
+.article-text {
+    line-height: 1.8;
+}
+
+.article-subtitle {
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+    color: #b4ad9e;
+}  
+
+/* Button */
+.section-button {
+    display: block;
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 18px 36px;
+    font-size: 20px;
+    color: #626262;
+    background-color: transparent;
+    border: 1px solid #626262;
+}
+
+.section-button:hover {
+    color: #03a9f4;
+    border-color: #03a9f4;
+}
