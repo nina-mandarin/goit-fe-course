@@ -24,6 +24,14 @@ button, input, optgroup, select, textarea {
     line-height: inherit;
 }
 
+ul, ol {
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
 .container {
     width: 900px;
     margin: 0 auto;
@@ -68,15 +76,11 @@ button, input, optgroup, select, textarea {
 .article-container {
     display: inline-block;
     width: 420px;
-    padding-bottom: 50px;
+    margin-bottom: 120px;
 }
 
 .article-container:nth-of-type(odd) {
     margin-right: 60px;
-}
-
-.article-container:not(:nth-last-of-type(-n+2)) {
-    margin-bottom: 70px;
 }
 
 .article-container img {
@@ -84,6 +88,7 @@ button, input, optgroup, select, textarea {
 }
 
 .article-container h3 {
+    margin-bottom: 30px;
     font-size: 30px;
     font-weight: 300;
 }
@@ -97,6 +102,7 @@ button, input, optgroup, select, textarea {
 }
 
 .article-subtitle {
+    margin-bottom: 24px;
     font-family: 'Ubuntu', sans-serif;
     text-transform: uppercase;
     color: #b4ad9e;
