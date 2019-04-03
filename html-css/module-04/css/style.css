@@ -83,8 +83,9 @@ p {
 }
 
 .menu-item a {
+    display: block;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
     color: #000;
@@ -115,6 +116,10 @@ p {
 }
   
 /* Products section */
+.product-box {
+    margin: 0;
+}
+
 .product-item {
     float: left;
     width: 255px;
