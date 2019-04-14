@@ -32,6 +32,7 @@ ul {
 }
 
 a {
+    display: block;
     text-decoration: none;
 }
 
@@ -99,7 +100,6 @@ a {
 }
 
 .section-title {
-    position: relative;
     margin-bottom: 70px;
     font-size: 30px;
     font-weight: 700;
@@ -108,15 +108,11 @@ a {
 
 .section-title::after {
     content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    right: 50%;
     display: block;
     width: 60px;
+    margin: 0 auto;
     padding-top: 36px;
     border-bottom: 2px solid var(--selection-color);
-    transform: translate(-50%, 50%);
 }
 
 /* Services */
@@ -252,7 +248,6 @@ a {
 }
 
 .social-link {
-    display: block;
     width: 56px;
     height: 56px;
     background-color: #fce38a;
