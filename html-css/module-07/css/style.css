@@ -1,0 +1,278 @@
+/***** FONTS *****/
+/* montserrat-regular - latin */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat Regular'), local('Montserrat-Regular'),
+        url('../fonts/montserrat-v13-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/montserrat-v13-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-900 - latin */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Montserrat Black'), local('Montserrat-Black'),
+        url('../fonts/montserrat-v13-latin-900.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/montserrat-v13-latin-900.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-slab-regular - latin */
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'),
+        url('../fonts/roboto-slab-v8-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/roboto-slab-v8-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* Wisdom Script Font */
+@font-face {
+    font-family: 'Wisdom';
+    src: url('../fonts/wisdom_script_aj-webfont.woff2') format('woff2'),
+        url('../fonts/wisdom_script_aj-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Noto Serif instead of Droid Serif */
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif:400i');
+
+
+/***** MAIN STYLES *****/
+:root {
+    --color-title: #222;
+    --color-text: #777;
+    --selection-color: #fed136;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.2;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 90px;
+}
+
+.logo {
+    font-family: 'Wisdom', serif;
+    font-size: 26px;
+    line-height: 42px;
+    color: var(--selection-color);
+}
+
+.menu-list {
+    display: flex;
+    align-items: center;
+}
+
+.menu-item:nth-last-of-type(n+2) {
+    margin-right: 40px;
+}
+
+.menu-item a {
+    font-size: 14px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: var(--color-title);
+}
+
+.menu-item a:hover,
+.menu-item a:focus {
+    color: var(--selection-color);
+}
+
+/* MAIN */
+.main-page>section {
+    padding: 90px 0 102px;
+    text-align: center;
+}
+
+.section-title {
+    line-height: 75px;
+    font-size: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.section-subtitle {
+    margin-bottom: 76px;
+    font-family: 'Noto Serif', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: var(--color-text);
+}
+
+/* Services */
+.service-section .section-title {
+    color: var(--color-title);
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-item {
+    flex-basis: 290px;
+    padding: 10px;
+}
+
+.service-item-title {
+    line-height: 75px;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: -0.025em;
+    color: var(--color-title);
+}
+
+.service-item-title::before {
+    display: block;
+    content: '';
+    width: 72px;
+    height: 72px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 38px;
+    border: 3px solid var(--selection-color);
+    border-radius: 50%;
+}
+
+.service-item:nth-of-type(1) .service-item-title::before {
+    background-image: url(../img/Icon-Basket.png);
+}
+
+.service-item:nth-of-type(2) .service-item-title::before {
+    background-image: url(../img/Icon-Laptop.png);
+}
+
+.service-item:nth-of-type(3) .service-item-title::before {
+    background-image: url(../img/Icon-Locked.png);
+}
+
+.service-item-text {
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+    letter-spacing: -0.025em;
+    color: var(--color-text);
+} 
+
+/* Contact us */
+.contact-section {
+    background-image: url(../img/contact-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.contact-section .section-title {
+    color: #fff;
+}
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact-form-fields {
+    flex-basis: 458px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form textarea {
+    flex-basis: 458px;
+    resize: none;
+}
+
+.contact-form-field {
+    padding: 16px 20px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form-fields .contact-form-field:not(:last-of-type) {
+    margin-bottom: 28px;
+}
+
+.contact-form-field::placeholder {
+    font-weight: 900;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+    color: #bbb;
+}
+
+.contact-form-field:focus, .contact-form-field:required {
+    outline: none;
+}
+
+.contact-form-field:required:focus:valid {
+    outline: 1px solid #0f0;
+    outline-offset: 2px;
+}
+
+.contact-form-field:required:focus:invalid {
+    outline: 1px solid #f00;
+    outline-offset: 2px;
+}
+
+.contact-form-btn {
+    max-width: 50%;
+    margin: 28px auto 0;
+    padding: 24px 42px;
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: var(--selection-color);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+} 
