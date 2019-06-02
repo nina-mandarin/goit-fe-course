@@ -1,0 +1,39 @@
+.footer {
+    @include flex-between-center;
+    padding: 20px 0;
+    border-top: 1px solid #e5e5e5;
+}
+
+.copyright {
+    display: flex;
+    font-size: 14px;
+}
+
+.copyright__link {
+    padding-left: 4px;
+    color: $selection-color;
+}
+
+.subscribe-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.subscribe-container__email {
+    padding: 12px;
+    font-family: $secondary-font-family;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.6;
+    color: $secondary-text-color;
+    border: 1px solid #e7e7e7;
+    &::placeholder {
+        color: #ccc;
+    }
+}
+
+.subscribe-container__button {
+    @extend %button;
+    background-color: $main-light-color;
+    transition: all 200ms linear;
+}

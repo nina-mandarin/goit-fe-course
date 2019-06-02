@@ -1,0 +1,35 @@
+/* Social icons */
+.social-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include flex-center;
+    width: 100%;
+    height: 472px;
+    background-image: linear-gradient(to top, rgba(252, 227, 138, .9) 0%, rgba(243, 129, 129, .9) 100%);
+    box-shadow: 10px 10px 0 0 $main-light-color;
+    opacity: 0;
+    transform: translate(-10px, -10px);
+    transition: all 200ms linear;
+}
+
+.social-list__svg {
+    width: 26px;
+    height: 26px;
+    fill: $selection-color;
+}
+
+.social-list__link {
+    @include flex-center;
+    width: 56px;
+    height: 56px;
+    background-color: #fce38a;
+    border-right: 1px solid $selection-color;
+    transition: background-color 200ms linear;
+    &:hover {
+        background-color: $selection-color;
+        & .social-list__svg {
+            fill: #fff;
+        }
+    }
+}

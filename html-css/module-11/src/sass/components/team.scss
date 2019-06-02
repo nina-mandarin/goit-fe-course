@@ -1,0 +1,32 @@
+.team-list {
+    padding: 80px 0;
+}
+
+.team-list__item {
+    position: relative;
+    flex: 0 0 380px;
+    &:hover .social-list {
+        opacity: 1;
+    }
+}
+
+.team-list__img {
+    margin-bottom: 16px;
+    height: 472px;
+}
+
+.team-list__title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.team-list__desc {
+    font-family: $secondary-font-family;
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.6;
+    color: $secondary-text-color;
+}

@@ -1,0 +1,68 @@
+.header {
+    min-height: 998px;
+    background-color: $selection-color;
+    background-image: linear-gradient(to top, rgba(252, 227, 138, .9) 0%, rgba(243, 129, 129, .9) 100%), url(../images/header-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @media (min-resolution: 192dpi) {
+        background-image: linear-gradient(to top, rgba(252, 227, 138, .9) 0%, rgba(243, 129, 129, .9) 100%), url(../images/header-img@2x.jpg);
+    }
+}
+
+
+.header-nav {
+    @include flex-between-center;
+    padding: 30px 0;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: $header-text-color;
+    animation: fadeInDown .5s linear;
+}
+
+.menu-list {
+    @include flex-between-center;
+}
+
+.menu-list__item:not(:last-of-type) {
+    margin-right: 50px;
+}
+
+.menu-list__link {
+    padding: 2px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $header-text-color;
+    transition: color 200ms linear, border-bottom 200ms linear;
+    &:hover {
+        color: $header-selection-color;
+        border-bottom: 2px solid $header-selection-color;
+    }
+}
+
+
+.menu-list__icon {
+    width: 18px;
+    height: 18px;
+    fill: $header-text-color;
+    cursor: pointer;
+    &:hover {
+        fill: $header-selection-color;
+    }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}

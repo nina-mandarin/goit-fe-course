@@ -1,0 +1,30 @@
+.banner {
+    width: 820px;
+    padding-top: 162px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.banner__text {
+    font-family: $cursive-font-family;
+    font-size: 72px;
+    color: $header-text-color;
+}
+
+.banner__title {
+    font-size: 150px;
+    font-weight: 700;
+    line-height: 140px;
+    text-transform: uppercase;
+    color: $header-text-color;
+}
+
+.banner-btn {
+    @extend %button;
+    margin: 0 auto;
+    border: 3px solid $header-text-color;
+    transition: transform .3s linear;
+    &:hover {
+        transform: scale(1.5);
+    }
+}

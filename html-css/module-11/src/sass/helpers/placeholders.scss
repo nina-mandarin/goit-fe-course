@@ -1,0 +1,15 @@
+%button {
+    display: block;
+    padding: 12px 36px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
